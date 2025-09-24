@@ -1,25 +1,97 @@
-<!-- Primary Visualization -->
-<div class="chart-feature">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BX12+ Bus Route: Passenger Transfers</title>
+
+  <!-- Google Fonts (Optional) -->
+  <link href="https://fonts.googleapis.com/css2?family=Helvetica&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Helvetica', system-ui, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+
+    .chart-feature {
+      max-width: 1200px;
+      margin: 20px auto;
+      padding: 0 10px;
+    }
+
+    .chart-header {
+      text-align: center;
+      margin-bottom: 10px;
+    }
+
+    .chart-title {
+      font-size: 24px;
+      margin: 0;
+    }
+
+    .chart-description {
+      font-size: 18px;
+      color: #555;
+      margin: 5px 0 0 0;
+    }
+
+    .chart-content {
+      display: flex;
+      justify-content: center;
+      margin-top: 10px;
+    }
+
+    .chart-placeholder {
+      display: flex;
+      justify-content: center; /* horizontal centering */
+      align-items: center;     /* vertical centering if needed */
+      width: 100%;
+      max-width: 1000px;        /* match your plot width */
+      margin: 0 auto;
+    }
+
+    .plot-container {
+      width: 100%;
+    }
+
+    .chart-credits {
+      display: flex;
+      justify-content: space-between;
+      font-size: 12px;
+      color: #888;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Primary Visualization -->
+  <div class="chart-feature">
     <div class="chart-header">
-        <h3 class="chart-title">BX12+ Bus Route: Passenger Transfers</h3>
-        <p class="chart-description">
-          Many passengers on the BX12+ make this bus one segment of their journey, whether heading to work or traveling for leisure. 
-          This visualization shows how riders either transfer to another mode or continue on the bus alone.
-        </p>
-      </div>
-      
+      <h3 class="chart-title">BX19 Bus Route: Hourly Average Speed</h3>
+      <p class="chart-description">
+        Average speed of the BX19 bus route by hour of day and day of week, revealing congestion patterns and route performance
+      </p>
+    </div>
+    
     <div class="chart-content">
       <div class="chart-placeholder">
-        <!-- Sankey chart container -->
-        <div id="bus-sankey" class="plot-container"></div>
-  
-        <!-- Load Sankey visualization script -->
-        <script type="module" src="./assets/js/sankey.js"></script>
+        <!-- Heatmap container -->
+        <div id="avg-speed-heatmap" class="plot-container"></div>
+
+        <!-- Load Heatmap JS -->
+        <script type="module" src="./assets/js/heatmap.js"></script>
       </div>
     </div>
+
     <div class="chart-credits">
-      <span>Source: Global Enterprise Research Initiative</span>
-      <span>Updated Quarterly • Next: October 2025</span>
+      <span>Source: NYC Open Data</span>
+      <span></span>
     </div>
   </div>
-  
+
+</body>
+</html>
